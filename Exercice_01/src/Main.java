@@ -13,6 +13,8 @@ public class Main {
 		number2 = sc.nextInt();
 		
 		System.out.println("SOMA: " + (number1 + number2));
+		
+		sc.close();
 
 	}
 
