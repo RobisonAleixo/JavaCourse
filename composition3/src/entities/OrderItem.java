@@ -1,16 +1,16 @@
 package entities;
 
 public class OrderItem {
-	
-	private int quantity;
-	private Double price;
-	
-	public OrderItem() {}
 
-	public OrderItem(Integer quantity, Double price) {
-		super();
+	private Integer quantity;
+	private Product product;
+
+	public OrderItem() {
+	}
+
+	public OrderItem(Integer quantity, Product product) {
 		this.quantity = quantity;
-		this.price = price;
+		this.product = product;
 	}
 
 	public Integer getQuantity() {
@@ -21,16 +21,16 @@ public class OrderItem {
 		this.quantity = quantity;
 	}
 
-	public Double getPrice() {
-		return price;
+	public Product getProduct() {
+		return product;
 	}
 
-	public void setPrice(Double price) {
-		this.price = price;
+	public void setProduct(Product product) {
+		this.product = product;
 	}
-	
+
 	public double subTotal() {
-		return quantity * price;
+		return quantity * product.getPrice();
 	}
 
 }
