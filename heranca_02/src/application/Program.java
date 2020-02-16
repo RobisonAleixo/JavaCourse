@@ -46,7 +46,7 @@ public class Program {
 		System.out.println();
 		System.out.println("PAYMENTS:");
 		for (Employee x : listEmployee) {
-			System.out.println(x.getName() + " - $ " + x.payment());
+			System.out.println(x.getName() + " - $ " + String.format("%.2f", x.payment()));
 		}
 
 		sc.close();
