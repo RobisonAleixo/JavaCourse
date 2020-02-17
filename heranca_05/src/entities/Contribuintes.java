@@ -31,6 +31,11 @@ public abstract class Contribuintes {
 		this.rendaAnual = rendaAnual;
 	}
 
+	@Override
+	public String toString() {
+		return name + ": $ " + String.format("%.2f", calcularImpostos());
+	}
+	
 	// Methods
 	public abstract double calcularImpostos();
 

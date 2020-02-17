@@ -44,10 +44,15 @@ public class Program {
 		
 		System.out.println();
 		System.out.println("TAXES PAID: ");
+		double totalContribuintes = 0;
 		
 		for (Contribuintes cont : contribuinte) {
-			System.out.println(cont.getName() + ": $ " + String.format("%.2f", cont.calcularImpostos()));
+			System.out.println(cont);
+			totalContribuintes += cont.calcularImpostos();
 		}
+		
+		System.out.println();
+		System.out.println("TOTAL TAXES: $ " + String.format("%.2f", totalContribuintes));
 
 		sc.close();
 	}
